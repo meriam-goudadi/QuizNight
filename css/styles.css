@@ -1,0 +1,467 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/cerveauPaint.jpg);
+    color: #333;
+    /* From https://css.glass */
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.4px);
+    -webkit-backdrop-filter: blur(3.4px);
+}
+
+header {
+    background-color: #000;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img {
+    height: 90px; /* Ajustez la taille du logo */
+}
+
+header .header-content {
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 0.7em;
+    display: flex;
+    justify-content: center;
+}
+
+.auth-buttons button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.auth-buttons button:hover {
+    background-color: #0480a2;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero h2 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.quiz-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px; /* Espacement entre les quiz-card */
+}
+
+.quiz-card {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.quiz-card .quiz-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Ajustez la hauteur */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.quiz-card .quiz-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Pour centrer et redimensionner l'image */
+}
+
+.quiz-card h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.quiz-card p {
+    font-size: 1em;
+    color: #666;
+}
+
+.quiz-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #00000094;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.quiz-card a:hover {
+    background-color: #0480a2;
+}
+
+/* Styles pour les boutons "Modifier" et "Supprimer" */
+.quiz-card form {
+    display: inline-block;
+    margin: 5px;
+}
+
+.quiz-card form button {
+    background-color: #dc3545; /* Rouge pour le bouton Supprimer */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.quiz-card form button[name="delete_quiz"]:hover {
+    background-color: #c82333; /* Rouge plus foncé au survol */
+}
+
+.quiz-card a[href*="edit_quiz"] {
+    background-color: #ffc107; /* Jaune pour le bouton Modifier */
+    color: black;
+}
+
+.quiz-card a[href*="edit_quiz"]:hover {
+    background-color: #e0a800; /* Jaune plus foncé au survol */
+}
+
+/* Pge admin css */
+.create-quiz-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.create-quiz-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0480a2;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.create-quiz-button:hover {
+    background-color: #036a8a;
+}
+
+.edit-button, .delete-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button {
+    background-color: #ffc107;
+    color: black;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .create-quiz-container {
+        margin: 10px 0;
+    }
+
+    .create-quiz-button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .edit-button, .delete-button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .quiz-play {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .question-container h3 {
+        font-size: 1.2em;
+    }
+
+    .answer-button {
+        font-size: 0.9em;
+    }
+
+    .quiz-completed button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Page Play_quiz css */
+.quiz-play {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question-container {
+    margin: 20px 0;
+}
+
+.question-container h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.answer-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #0480a2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.answer-button:hover {
+    background-color: #036a8a;
+}
+
+.correct-answer {
+    color: green;
+    font-weight: bold;
+}
+
+.incorrect-answer {
+    color: red;
+    font-weight: bold;
+}
+
+.quiz-completed {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-completed button {
+    background-color: #0480a2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.quiz-completed button:hover {
+    background-color: #036a8a;
+}
+/* personnalisation de l'affichage du score */
+.quiz-completed p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.quiz-completed p:first-of-type {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .logo img {
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .hero h2 {
+        font-size: 1.5em;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .quiz-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .auth-buttons button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .quiz-card form button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .quiz-card a[href*="edit_quiz"] {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* Page register css */
+.register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.register-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.register-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-container input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.register-container button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.register-container button:hover {
+    background-color: #0480a2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .logo img {
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .register-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .register-container h2 {
+        font-size: 1.5em;
+    }
+
+    .register-container input {
+        font-size: 0.9em;
+    }
+
+    .register-container button {
+        font-size: 0.9em;
+    }
+}
